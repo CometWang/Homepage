@@ -8,7 +8,7 @@ function plusDivs(n) {
 function currentDiv(n) {
   showDivs(slideIndex = n);
 }
-
+//绝对路径： 
 function showDivs(n) {
   var i;
   var x = document.getElementsByClassName("slides");
