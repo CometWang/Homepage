@@ -1,0 +1,189 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css");
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    background-color: #b0c6ee;
+}
+body {
+    width:100%;
+    height:100vh;
+    margin: 0;
+    padding: 0px;
+}
+
+.header {
+    border:1px solid white;
+    width:100%;
+    
+    background-position:center;
+    background-size:cover;
+    background-color: rgba(255,255,255,1);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.home-content{
+    display: flex;
+    flex-direction: row;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 10%;
+  
+}
+
+.nav-menu {
+    width:95%;
+    height: 50px;
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content: space-between;
+    align-items:center;
+    margin-top:8%;
+    margin-bottom:2% ;
+    margin-left: 50px;
+
+    background-color: rgb(255, 254, 254);
+}
+
+.nav-menu .logo {
+    font-size: 50px;
+    font-weight:600;
+    color: #b0c6ee;
+    background-color: white;
+    padding-left: 20px;
+}
+
+.nav-menu .menu ul {
+    list-style:none;
+    display:flex;
+    height:100%;
+    color: aliceblue;
+   
+}
+.nav-menu .menu ul li{
+    background-color: white;
+}
+.nav-menu .menu ul li a {
+    text-decoration:none;
+    color: #b0c6ee;
+    padding: 1em 1.5em;
+    
+    line-height: 1px;
+    font-size:15px;
+    background-color: white;
+    text-transform: uppercase;
+    
+}
+.nav-menu .menu li a:hover,
+.nav-menu .menu li a.active {
+    border:1px solid #b0c6ee;
+   
+    border-radius: 1px;
+    margin-left: 5px;
+  
+}
+.banner {
+    height: 400px;
+    width: 60%;
+    text-align: center;
+    margin-left: 3% ;
+   
+    font-family: 'Didact Gothic', sans-serif;
+}
+.banner h1 {
+    font-size: 40px;
+    font-weight:bold;
+    color: aliceblue;
+    font-family: 'Encode Sans SC', sans-serif;
+
+}
+.banner p {
+    padding-top:20px;
+    font-size: 18px;
+    color: rgba(255,255,255,0.60);
+    font-weight:200;
+    word-spacing: 1px;
+}
+.banner a {
+    text-decoration: none;
+    font-size:18px;
+    color: rgba(255,255,255,1);
+    margin: 80px auto;
+    display: block;
+    font-weight: bold;
+    border: 2px solid rgba(255,255,255,1);
+    width: 27%;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    border-radius: 7px;
+}
+
+.banner a:hover{
+    text-decoration: none;
+    font-size:18px;
+    color: rgb(98, 99, 100);
+    margin: 80px auto;
+    display: block;
+    font-weight: bold;
+    border: 2px solid rgb(98, 99, 100);
+    width: 27%;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    border-radius: 7px;
+}
+
+
+.leftarrow, .rightarrow, .badge {
+    cursor:pointer;
+}
+.badge {
+    height:13px;
+    width:13px;
+    padding:0;
+}
+
+#carousel{
+    margin: auto; /* 居中 */
+    width: 700px; /* 设置宽度 */
+    position: relative; /* 相对定位 */
+    overflow: hidden; /* 超出隐藏 */
+    height: 300px;
+}
+#carousel img{
+    width: 600px; /* 设定大小 按比例缩放 */
+}
+#carousel > ul {
+    display: flex; /* 图片处理为一行 */
+    position: absolute; /* 设置绝对定位，实现相对于#carousel的绝对定位 */
+}
+#carousel > ul,
+#carousel > ul > li{
+    padding: 0;
+    margin: 0;
+    list-style:none; 
+}
+
+#carousel > ul{
+     animation: switch 10s ease 1s infinite alternate; /* 设定动画播放 */
+}
+
+#carousel > ul:hover{
+     animation-play-state: paused; /* 暂停动画 */
+}
+
+@keyframes switch{ /* 制定动画规则 */
+    0%,13%{
+        left: 0;
+    }
+    27%,41%{
+        left: -600px;
+    }
+    55%,69%{
+        left: -1200px;
+    }
+    83%,100% {
+        left: -1800px;
+    }
+}

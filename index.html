@@ -1,49 +1,57 @@
 <!DOCTYPE html>
 <html lang="en" >
 <head>
-  <meta charset="UTF-8">
-  <title> Homepage </title>
-  <link rel="stylesheet" href="./Homepage.css">
+            <title>Eric's Website</title>
+            <meta charset="UTF-8">
+            <title> Homepage </title>
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+SC:wght@200&display=swap" rel="stylesheet">
+            <link rel="stylesheet" href="./styleshee/Homepage.css">
 </head>
 
 <body>
-<div class="header">
-        <div class="nav-menu">
-            <div class="logo">SSES</div>
-            <div class="menu">
-                <ul>
-                    <li><a href="#" class="active">Homepage</a></li>
-                    <li><a href="./portfolio.html"> Portfolio </a></li>
-                    <li><a href="#"> Subject Groups </a></li>
-                    <li><a href="#"> CORE </a></li>
-                    <li><a href="#"> Resources </a></li>
-                </ul>
+    <div class="header">
+            <div class="nav-menu">
+                <div class="logo">SSES</div>
+                <div class="menu">
+                    <ul>
+                        <li><a href="./index.html" class="active">Homepage</a></li>
+                        <li><a href="./portfolio.html"> Portfolio </a></li>
+                        <li><a href="#"> Subjects Groups </a></li>
+                        <li><a href="#"> CORE </a></li>
+                        <li><a href="#"> Resources </a></li>
+                    </ul>
+                </div>
             </div>
+            
+        
+    </div>
+    <div class="home-content">
+        <div id="carousel">
+            <ul> <!-- 图片容器 -->
+                <li>
+                    <img src="./img/1.jpeg">
+                </li>
+                <li>
+                    <img src="./img/2.jpeg">
+                </li>
+                <li>
+                    <img src="./img/3.jpeg">
+                </li>
+                <li>
+                    <img src="./img/4.jpg">
+                </li>
+            </ul>
         </div>
         <div class="banner"> 
             <h1>From Shangde To the World</h1>
             <p> Our goal is to cultivate students that can change the world </p>
             <a href="Homepage.html"> Explore </a>
         </div>
-</div>
-  <div class="container">
-        <div class="text">
-            <h1>Fusce ultrices fringilla metus</h1>
-            <p>Donec leo, vivamus fermentum nibh in augue praesent a lacus at urna congue</p>
-        </div>
-        <div class="content display-container" style="max-width:800px">
-            <img class="slides" src="./img/" style="width:100%">
-            <img class="slides" src="/Users/kbharvard/Desktop/IB/CAS/Service Learning/record/WechatIMG381.jpeg" style="width:100%">
-            <img class="slides" src="/Users/kbharvard/Desktop/IB/CAS/Service Learning/record/WechatIMG364.jpeg" style="width:100%">
-            <div class="center container section large SSES-text-white display-bottommiddle" style="width:100%">
-                <div class="leftarrow hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
-                <div class="rightarrow hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
-                <span class="badge dot border transparent SSES-hover-white" onclick="currentDiv(1)"></span>
-                <span class="badge dot border transparent SSES-hover-white" onclick="currentDiv(2)"></span>
-                <span class="badge dot border transparent SSES-hover-white" onclick="currentDiv(3)"></span>
-            </div>
-        </div>
-</div>
+        
+    </div>
+    
 <script src='./js/Homepage.js'></script>
 </body>
 </html>
