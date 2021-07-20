@@ -1,26 +1,19 @@
-var slideIndex = 1;
-showDivs(slideIndex);
+let controller = new ScrollMagic.Controller();
+let timeline = new TimelineMax();
 
-function plusDivs(n) {
-  showDivs(slideIndex += n);
-}
+timeline
+  .to(".rock", 10, { y: -300 })
+  .to(".girl", 10, { y: -200 }, "-=10")
+  .fromTo(".bg1", { y: -50 }, { y: 0, duration: 10 }, "-=10")
+  .to(".content", 10, { top: "0%" }, "-=10")
+  .fromTo(".content-images", { opacity: 0 }, { opacity: 1, duration: 3 })
+  .fromTo(".text", { opacity: 0 }, { opacity: 1, duration: 3 });
 
-function currentDiv(n) {
-  showDivs(slideIndex = n);
-}
-//绝对路径： 
-function showDivs(n) {
-  var i;
-  var x = document.getElementsByClassName("slides");
-  var dots = document.getElementsByClassName("dot");
-  if (n > x.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = x.length}
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";  
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" SSES-white", "");
-  }
-  x[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " SSES-white";
-}
+let scene = new ScrollMagic.Scene({
+  triggerElement: "section",
+  duration: "300%",
+  triggerHook: 0,
+})
+  .setTween(timeline)
+  .setPin("section")
+  .addTo(controller);
